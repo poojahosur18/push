@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>LOGIN FORM</title>
+<style>
+h1, h5{
+color: blue;
+}
+#first{
+color:blue;
+}
+</style>
+</head>
+<body>
+<h1>LOGIN FORM</h1>
+<label for="Username">Username:</label>
+<input type="text" id="first" name="Username" placeholder="Enter your Username" required>
+</html>
+<br>
+<br>
+<label for="father">father:</label>
+<input type="text" id="first" name="father" placeholder="Enter your father" required>
+<br>
+<br>
+<label for="mother">mother:</label>
+<input type="text" id="first" name="mother" placeholder="Enter your mother" required>
+<br>
+<br>
+<label for="SRN" >SRN: </label>
+<input type="text" id="first" name="SRN" placeholder="Enter your SRN" required>
+<br>
+<br>
+<label for="adress">adress:</label>
+<input type="text" id="first" name="adress" placeholder="Enter your adress" required>
+<br>
+<br>
+<label for="contact_number"> Enter Mobile Number </label>
+    <input type="text" 
+    id="contact_number"
+    name="contact_number" placeholder="Enter your phoneno." onchange="verifymobile()" required>
+    </div>
+
+<br>
+<h5>qualification</h5>
+<input type="checkbox" id="10th" name="10th" value="10th">
+<label for="10th">I have passed 10th</label>
+<br>
+<input type="checkbox" id="12th" name="12th" value="12th">
+<label for="12th"> I have passed 12th</label>
+<br>
+<input type="checkbox" id="graduation" name="graduation" value="graduated">
+<label for="graduation">Im graduated</label>
+<br>
+
+<h5>gender</h5>
+<input type="radio" id="male" name="gender" value="male">
+<label for="male"> male</label><br>
+<input type="radio" id="female" name="gender" value="female">
+<label for="female">female</label><br>
+<input type="radio" id="other" name="other" value="others">
+<label for="other">others</label><br>
+<button type="submit" class="submit-btn" id="submit" onclick="success()">Submit</button>
+
+
+
+</body>
+</html>
+<script>
+    function success(){
+    if(submit)
+    alert("Form submitted successfully!");
+    }
+    
+    function verifymobile()
+    {
+    var mobile = document.getElementById('contact_number')
+    var result = /^\d{10}$/;
+    if (!result.test(mobile.value)) {
+    alert("Invalid mobile number..! Kindly enter valid mobile number")
+    mobile.focus()
+    }
+    else {
+    alert("Valid mobile number");
+    }
+
+    }
+</script>
